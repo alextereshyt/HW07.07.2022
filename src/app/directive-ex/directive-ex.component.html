@@ -1,0 +1,29 @@
+<div class="outer-container"><table id="customers">
+<tr>
+    <th>Rank</th>
+    <th>Name</th>
+    <th>Points</th>
+     <th>Team</th></tr> 
+     <ng-template ngFor let-item [ngForOf]="items" let-i="index" >
+        <tr>
+        <td>{{i+1}}</td>
+        <td>{{items[i].name}}</td>
+        <td>{{items[i].points}}</td>
+        <td>{{items[i].team}}</td>
+        </tr>
+      </ng-template> 
+<tr>
+    <td><button (click)="add(name,points,team)">Add</button>
+    </td>
+<td><input type="text" #name>
+</td>
+<td><input type="text" #points>
+</td>
+<td><input type="text" #team>
+</td>
+</tr>
+</table></div>
+
+
+
+
